@@ -10,7 +10,7 @@ body{
 
 
 .form{
-  width: 800px;
+  width: 1000px;
   margin: 150px auto;
 }
 
@@ -19,7 +19,7 @@ body{
   text-align: center;
   color: #fff;
   background-color: transparent;
-  padding: 16px 0;
+  padding: 16px 30px;
   border: none;
 
 }
@@ -40,13 +40,14 @@ body{
 }
 
 .form__button{
+  display: inline-block;
   font-size: 20px;
   text-align: center;
   background-color: #fff;
   border: 1px solid #000;
   border-radius: 8px;
   margin-left: 20px;
-  padding: 14px 20px;
+  padding: 14px 60px;
 }
 
 .result-box{
@@ -55,18 +56,16 @@ body{
 }
 
 .result{
-  width: 300px;
-  height: 200px;
+  width: 600px;
+  height: 220px;
   text-align: center;
   background-color: #fff;
   margin-top: 50px;
   margin-left: 20px;
-  padding: 30px 60px;
+  padding: 30px 30px;
   border: 1px solid #000;
   border-radius: 8px;
 }
-
-
 
 .last-img{
   padding-top: 15px;
@@ -76,4 +75,20 @@ body{
   font-size: 18px;
   text-align: center;
   margin-top: 16px;
+}
+
+
+
+.result-error{
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: red;
+}
+
+.result-success{
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: green;
 }
