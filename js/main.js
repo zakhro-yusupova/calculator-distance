@@ -41,26 +41,46 @@ elForm.addEventListener("submit", function(evt){
     elFormPlane.classList.add("result-success");
   }
 
-  function onfoot(){
-    return elFormInputVal / person;
+
+  function foot (){
+    var onfoot = elFormInputVal / person;
+    var onfootHours = Math.floor(onfoot);
+    var onfootMinutes = Math.floor((onfoot - onfootHours)*60);
+    var totalResult = (onfootHours + " soat " + onfootMinutes + " minut");
+
+    return totalResult ;
   }
 
-  function bybike(){
-    return elFormInputVal / bike;
+  function bicycle (){
+    var bybike = elFormInputVal / bike;
+    var bybikeHours = Math.floor(bybike);
+    var bybikeMinutes = Math.floor((bybike - bybikeHours)*60);
+    var totalBikeResult = (bybikeHours + " soat " + bybikeMinutes + " minut");
+
+    return totalBikeResult ;
   }
 
+  function transport (){
+    var bycar = elFormInputVal / car;
+    var bycarHours = Math.floor(bycar);
+    var bycarMinutes = Math.floor((bycar - bycarHours)*60);
+    var totalCarResult = (bycarHours + " soat " + bycarMinutes + " minut");
 
-  function bycar(){
-    return elFormInputVal / car;
+    return totalCarResult;
   }
 
+  function airplane (){
+    var byplane = elFormInputVal / plane;
+    var byplaneHours = Math.floor(byplane);
+    var byplaneMinutes = Math.floor((byplane - byplaneHours)*60);
+    var totalPlaneResult = (byplaneHours + " soat " + byplaneMinutes + " minut");
 
-  function byplane(){
-    return elFormInputVal / plane;
+    return totalPlaneResult;
   }
 
-  elFormPerson.textContent = Math.round (onfoot()) + " soat" ;
-  elFormBike.textContent = Math.round (bybike()) + " soat";
-  elFormCar.textContent = Math.round (bycar()) + " soat";
-  elFormPlane.textContent = Math.round (byplane()) + " soat";
+  elFormPerson.textContent = foot() ;
+  elFormBike.textContent = bicycle() ;
+  elFormCar.textContent = transport() ;
+  elFormPlane.textContent = airplane() ;
+
 })
